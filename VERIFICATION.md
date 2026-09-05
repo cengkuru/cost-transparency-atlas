@@ -29,3 +29,5 @@ Sol reviewer found a stale prepared build. The primary rebuilt, proved source/bu
 The reviewed refresh stages sources separately, bounds host/size/time, records metadata and hashes, and does not replace the last successful analysis on a source failure. A second full live refresh of all source downloads was not executed. Deployment is checked separately against the live content and GitHub workflow receipt.
 
 Fixture outcome accuracy: 100% (8/8 explicit Node fixtures), not an estimate of factual project accuracy. Tokens used: not-measured. Test latency: 1,028.57 ms against a 10,000 ms check budget (10.3%); a separate reviewer run took 3,272.46 ms. Human adoption, national coverage, source factual accuracy and impact remain unverified.
+
+Release dependency check: upgraded the offline streaming parser to stream-json 3.6.0; npm audit reports zero known vulnerabilities. Converted the Costa Rica source again (18 records, version 0.9 and publisher timestamp preserved). Node 22 tests passed 8/8. Independent dependency repair review passed.

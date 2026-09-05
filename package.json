@@ -10,7 +10,7 @@
     "refresh": "node scripts/refresh.mjs"
   },
   "dependencies": {
-    "stream-json": "^1.9.1"
+    "stream-json": "^3.6.0"
   },
   "engines": {
     "node": ">=22 <23"
