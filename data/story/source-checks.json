@@ -1,0 +1,38 @@
+{
+  "snapshotId": "atlas-56e8378e871df657e298",
+  "publisherId": "zambia_ncc",
+  "packageSha256": "7e25a54ba49e4a8d95ee65e4c3dfe06c1da0811057f1d63cd7a8c69676341bb4",
+  "projectId": "oc4ids-xxpl20-zm-moe-bulemu-east-west",
+  "title": "Bulemu Solar PV East & West (2 × 20 MW)",
+  "processId": "contract-16",
+  "recordUpdated": "2026-05-26T14:44:56.563Z",
+  "budget": null,
+  "contractValue": null,
+  "sourcePath": "contractingProcesses[0].summary.sources[0].url",
+  "sourceUrl": "https://getfit-zambia.org/solar",
+  "selectionBasis": "Chosen to illustrate an identifier with a readable award source, but no project budget or contract value in the saved record. This is a purposive example, not a representative sample.",
+  "checkedAt": "2026-09-05",
+  "checkMethod": "Retrieved and read the linked primary page. This checks the named project and award context, not contract execution.",
+  "observed": "The GET FiT Zambia Solar page names Bulemu East and West among the April 2019 awards and identifies the Building Energy and Pele Energy joint venture.",
+  "boundary": "Award context is readable. This check does not establish a signed contract, payments, present delivery status or value for money.",
+  "checks": [
+    {
+      "project": "Bulemu Solar PV East & West",
+      "url": "https://getfit-zambia.org/solar",
+      "result": "Read successfully; project and award context found.",
+      "status": "read"
+    },
+    {
+      "project": "Kafulafuta Water Supply and Sanitation System",
+      "url": "https://www.mwds.gov.zm/?p=4388",
+      "result": "Retrieval timed out in the checking tool. Accessibility remains unverified; this is not proof of a broken public link.",
+      "status": "inconclusive"
+    },
+    {
+      "project": "Garneton North Solar PV",
+      "url": "https://www.afdb.org/en/news-and-events/press-releases/african-development-bank-group-boosts-zambias-renewable-energy-drive-1454-million-investment-garneton-north-solar-project-88233",
+      "result": "Retrieval returned HTTP 403 to the checking tool. Accessibility remains unverified; this is not proof of a broken public link.",
+      "status": "inconclusive"
+    }
+  ]
+}
