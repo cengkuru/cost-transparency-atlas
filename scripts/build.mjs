@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';
+const out='dist';fs.mkdirSync(out,{recursive:true});for(const f of ['index.html','style.css','app.js','README.md'])fs.copyFileSync(f,path.join(out,f));fs.writeFileSync(path.join(out,'.nojekyll'),'');
+const latest=JSON.parse(fs.readFileSync('data/generated/snapshot.json'));
+for(const name of fs.readdirSync('data/generated/snapshots').filter(f=>f.startsWith('atlas-')&&f.endsWith('.json'))){const s=JSON.parse(fs.readFileSync(path.join('data/generated/snapshots',name)));const recordFiles={};for(const p of s.publishers){if(p.excluded)continue;const rel=`data/generated/records/${s.snapshotId}/${p.id}.json`;fs.mkdirSync(path.dirname(path.join(out,rel)),{recursive:true});const rows=s.projects.filter(r=>r.sourceId===p.id).map(({sourceId,publisher,country,source,...r})=>r);fs.writeFileSync(path.join(out,rel),JSON.stringify(rows));recordFiles[p.id]=rel;}
+const {projects,...meta}=s;const manifest={...meta,recordFiles,format:'atlas-snapshot-index-v1'};fs.mkdirSync(path.join(out,'data/generated/snapshots'),{recursive:true});const bytes=JSON.stringify(manifest);fs.writeFileSync(path.join(out,'data/generated/snapshots',name),bytes);if(s.snapshotId===latest.snapshotId)fs.writeFileSync(path.join(out,'data/generated/snapshot.json'),bytes);}
+console.log('Static build complete; raw caches excluded.');
