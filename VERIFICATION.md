@@ -41,3 +41,14 @@ Observed in the browser: map pointer panning changed the saved map centre; the p
 390x844 and 320x740 viewport checks found no horizontal overflow. Mobile and desktop screenshots were inspected. Publisher selection, Freshness dates, repeated Records tab visits, original source links and evidence-page links worked. Reload restored snapshot, selected publisher, comparison and story. A missing named snapshot displayed 'Snapshot unavailable' rather than substituting the latest data. The three story views represent one saved snapshot, not a time series. Physical touch devices and assistive technology were not tested.
 
 Independent review found immutable-link, keyboard, initialization and comparison defects. Two bounded repair cycles resolved them; final review returned PASS with no critical or major finding remaining in that scope. All 8 existing data tests passed; these are data fixtures, not an automated UI test suite. Interaction evidence above comes from browser operation. The source snapshot and ingestion code were not changed.
+
+
+## Central visual revision, 5 September 2026
+
+The map-card revision remained an ordinary dashboard experience. This revision replaces its cards with a single disclosure instrument and brings comparisons into that instrument.
+
+Observed browser checks: direct budget-arm activation showed Costa Rica 18/18 and Zambia 81/107 with definitions and source links; Enter on the Ecuador budget endpoint opened its inspector; reloading restored that field inspection. Repeated removal/restoration of comparison and rapid publisher selection produced no invalid SVG coordinates. Ecuador's animated budget endpoint was observed at radius 193.9766 during transition and settled at 88.1402086, matching 80 + 125 * (2248/34520). Its sector label reads less than 0.1 percent rather than zero. West Lombok displays an unavailable profile.
+
+Mobile 390x844 and 320x740 layouts were inspected. A narrow-header overflow was repaired; the final 320px document has no horizontal overflow. Endpoint hit targets measured at least 45.17px at 320px. Keyboard movement/reset, paired mobile labels, source dates and saved field inspection were checked. Reduced-motion handling is implemented and reviewed but was not exercised with an operating-system preference change. Physical-device touch and assistive-technology testing remain unverified.
+
+The new geometry tests check 0/50/100 percent radii, invalid/missing counts, separate comparison denominators and excluded profiles. All 11 data/geometry fixtures passed. Independent review found comparison-animation and invalid-count defects plus missing explicit focus styling; the repair review passed. These checks establish implementation evidence, not Michael's aesthetic acceptance.

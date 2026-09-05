@@ -87,3 +87,12 @@ Geography locates publisher context only. Equal-sized markers are approximate ed
 The five availability dimensions use the existing immutable snapshot's publisher-level `metricCounts` and `recordCount`. Each visual length is independently scaled from zero to 100 percent. Their shape is not a composite score, an ITI result or a ranking. Filtered calculations remain in the evidence explorer. Dates are presented separately; no publication-history animation is inferred from a single snapshot.
 
 The map is served entirely from the same site using local vector geometry and vendored Leaflet. No map API key, tile service, geocoder or new paid service is required. The static build copies only the named application files, map assets and generated snapshot assets. Source ingestion and refresh remain unchanged.
+
+
+## Central disclosure instrument
+
+The opening scene now uses one five-arm graphic instead of movable dashboard cards. Each independent arm has a fixed 0 to 100 percent scale; its 20 engraved slots each span five percentage points, not records. Red represents the selected publisher; slate represents an optional comparison. The graphic does not combine fields into a score. Changing publisher morphs the visible lengths; the animation is a transition between selected profiles, not evidence of change over time.
+
+Select an arm to inspect its exact n/N, source field, interpretation boundary and original source. Select another publisher or use the previous/next controls to reshape the profile. The central Move handle repositions the whole graphic; arrow keys and Home provide keyboard movement/reset. Comparison uses the same instrument and separate denominators. Dates, records and full methods open on demand. Snapshot identity, publisher, comparison and open inspection state are preserved in shared URLs.
+
+`glyph.mjs` owns deterministic geometry and cancellable animation. `map-app.js` owns snapshot loading, publisher state and evidence links. `exhibit.css` owns the responsive scene. The existing `evidence.html` record explorer and the ingestion/refresh pipeline remain unchanged. A reduced-motion preference cuts to final geometry without travel.
