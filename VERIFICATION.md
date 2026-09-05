@@ -31,3 +31,13 @@ The reviewed refresh stages sources separately, bounds host/size/time, records m
 Fixture outcome accuracy: 100% (8/8 explicit Node fixtures), not an estimate of factual project accuracy. Tokens used: not-measured. Test latency: 1,028.57 ms against a 10,000 ms check budget (10.3%); a separate reviewer run took 3,272.46 ms. Human adoption, national coverage, source factual accuracy and impact remain unverified.
 
 Release dependency check: upgraded the offline streaming parser to stream-json 3.6.0; npm audit reports zero known vulnerabilities. Converted the Costa Rica source again (18 records, version 0.9 and publisher timestamp preserved). Node 22 tests passed 8/8. Independent dependency repair review passed.
+
+## Map interaction correction, 5 September 2026
+
+The original long-form opening did not meet Michael's intended interaction. This release replaces it with a map-first viewport and preserves the detailed record explorer at evidence.html.
+
+Observed in the browser: map pointer panning changed the saved map centre; the primary Move handle moved its panel from x=24 to x=174, then keyboard Right moved it to x=184; reset restored its default. The independent comparison panel moved by pointer and its reset cleared all four positioning overrides. Mobile comparison shows both publishers in paired rows. Costa Rica 18/18 and Zambia 81/107 budget-and-currency values agree with the snapshot. West Lombok displays an unavailable profile instead of zero bars.
+
+390x844 and 320x740 viewport checks found no horizontal overflow. Mobile and desktop screenshots were inspected. Publisher selection, Freshness dates, repeated Records tab visits, original source links and evidence-page links worked. Reload restored snapshot, selected publisher, comparison and story. A missing named snapshot displayed 'Snapshot unavailable' rather than substituting the latest data. The three story views represent one saved snapshot, not a time series. Physical touch devices and assistive technology were not tested.
+
+Independent review found immutable-link, keyboard, initialization and comparison defects. Two bounded repair cycles resolved them; final review returned PASS with no critical or major finding remaining in that scope. All 8 existing data tests passed; these are data fixtures, not an automated UI test suite. Interaction evidence above comes from browser operation. The source snapshot and ingestion code were not changed.

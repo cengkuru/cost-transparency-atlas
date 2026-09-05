@@ -76,3 +76,14 @@ Proposed roles, not appointments: a datastore maintainer owns refresh and source
 The `Publish Atlas` workflow runs tests, builds an allowlisted static directory, then deploys GitHub Pages. To roll back, revert the relevant release commit and let the same workflow deploy it. The former source snapshots remain immutable. Hosting on Michael's GitHub account establishes a shareable research preview, not CoST production acceptance.
 
 Tests include strict dates, numeric zero/boolean handling, empty identifiers, duplicate and multi-sector behavior, full snapshot reconciliation, licence exclusion, and independently calculated smaller-source budget pairs. The current snapshot baseline tests intentionally flag changes to the reviewed population. For a refresh that changes counts or publisher membership, independently recalculate and review the baseline before updating it. Browser checks and the independent review are recorded in `VERIFICATION.md`.
+
+
+## Map interaction release
+
+The opening experience is a movable world map with publisher disclosure profiles. Pan or zoom the map, select a publisher anchor, and move the profile using its Move handle. The keyboard alternative uses arrow keys on the handle and a reset control. Availability, Freshness and Records are separate views; the evidence explorer remains available at `evidence.html`.
+
+Geography locates publisher context only. Equal-sized markers are approximate editorial anchors for the country or named subnational region, not project positions, measured assets or national coverage. Natural Earth boundaries are neutral context and carry no coverage or performance colour. The two Indonesian publisher entries remain separate. See `data/map/README.md` for geographic provenance and the vendored Leaflet licence.
+
+The five availability dimensions use the existing immutable snapshot's publisher-level `metricCounts` and `recordCount`. Each visual length is independently scaled from zero to 100 percent. Their shape is not a composite score, an ITI result or a ranking. Filtered calculations remain in the evidence explorer. Dates are presented separately; no publication-history animation is inferred from a single snapshot.
+
+The map is served entirely from the same site using local vector geometry and vendored Leaflet. No map API key, tile service, geocoder or new paid service is required. The static build copies only the named application files, map assets and generated snapshot assets. Source ingestion and refresh remain unchanged.
