@@ -1,0 +1,139 @@
+{
+  "snapshotId": "atlas-56e8378e871df657e298",
+  "verifiedAt": "2026-09-06",
+  "method": "Count contractingProcesses entries by summary.tender.procurementMethod. Missing or blank methods remain Unstated. No inference of actual competition.",
+  "stageMethod": "Count each project record once when project.status is exactly completion and at least one contractingProcesses[].summary.status is exactly active or pre-award. No case folding or interpretation of other values. This compares two reporting levels; it does not establish a delivery problem.",
+  "generator": "scripts/procurement-evidence.mjs",
+  "publishers": {
+    "ecuador_cost_ecuador": {
+      "sourceSha256": "37825b3264759f5275bc64d93733b4798b247cf2e71f616a43f788d2f3d5e358",
+      "derivedSha256": "ce2f7b8b554e1302ec3ef0a2a03e1c24481c791ff3f37ff05fff7ea82daeb600",
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/ecuador_cost_ecuador/ecuador_cost_ecuador.json",
+      "publishedDate": "2026-08-25T18:12:02-05:00",
+      "records": 34520,
+      "processEntries": 34522,
+      "methods": {
+        "Unstated": 34522
+      },
+      "completedProjectsWithActiveProcesses": 0
+    },
+    "malawi_cost_malawi": {
+      "sourceSha256": "a9fdd35f4ba406033d8a01a9dc7a049364c6837ecfcfdc464b0309a5e921b560",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/malawi_cost_malawi/malawi_cost_malawi.json",
+      "publishedDate": "2026-08-13T00:00:00.000000Z",
+      "records": 694,
+      "processEntries": 484,
+      "methods": {
+        "Unstated": 367,
+        "direct": 6,
+        "limited": 8,
+        "open": 99,
+        "selective": 4
+      },
+      "completedProjectsWithActiveProcesses": 78
+    },
+    "nigeria_kaduna": {
+      "sourceSha256": "213db747300f9b9e545c312342cd0dfc6cff9aa0823b4d66755e894134b1dcd7",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/nigeria_kaduna/nigeria_kaduna.json",
+      "publishedDate": "2026-09-05T01:41:52.862Z",
+      "records": 200,
+      "processEntries": 0,
+      "methods": {},
+      "completedProjectsWithActiveProcesses": 0
+    },
+    "uganda_gpp": {
+      "sourceSha256": "63a78d591916a8da4fdeab106e8eedf279de69b808320b73c49a61fded1280fd",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/uganda_gpp/uganda_gpp.json",
+      "publishedDate": "2026-09-01T01:43:21+00:00",
+      "records": 393,
+      "processEntries": 562,
+      "methods": {
+        "direct": 3,
+        "limited": 79,
+        "open": 382,
+        "selective": 98
+      },
+      "completedProjectsWithActiveProcesses": 0
+    },
+    "costa_rica_cfia": {
+      "sourceSha256": "f9fd2fc1216032fe5527ad2876448887deab9aebc829a5f0f581b8e32723c45d",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/costa_rica_cfia/costa_rica_cfia.json",
+      "publishedDate": "2026-03-02T12:17:12.083-06:00",
+      "records": 18,
+      "processEntries": 0,
+      "methods": {},
+      "completedProjectsWithActiveProcesses": 0
+    },
+    "zambia_ncc": {
+      "sourceSha256": "7e25a54ba49e4a8d95ee65e4c3dfe06c1da0811057f1d63cd7a8c69676341bb4",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/zambia_ncc/zambia_ncc.json",
+      "publishedDate": "2026-06-25T21:27:07.206Z",
+      "records": 107,
+      "processEntries": 15,
+      "methods": {
+        "Unstated": 15
+      },
+      "completedProjectsWithActiveProcesses": 0
+    },
+    "mozambique_ane": {
+      "sourceSha256": "195b5a34214d8358b2dd44e90bcf611b10b06321c9359b67f2ead790999da194",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/mozambique_ane/mozambique_ane.json",
+      "publishedDate": "2026-09-05T01:41:38.256Z",
+      "records": 100,
+      "processEntries": 372,
+      "methods": {
+        "Unstated": 214,
+        "open": 158
+      },
+      "completedProjectsWithActiveProcesses": 0
+    },
+    "mexico_cost_jalisco": {
+      "sourceSha256": "f928492c4bb22b8babe002899e97c12ab308f335ef2d338ae03d60aae6602269",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/mexico_cost_jalisco/mexico_cost_jalisco.json",
+      "publishedDate": "2026-07-14T19:39:15-06:00",
+      "records": 800,
+      "processEntries": 800,
+      "methods": {
+        "Unstated": 1,
+        "direct": 40,
+        "limited": 3,
+        "open": 399,
+        "selective": 357
+      },
+      "completedProjectsWithActiveProcesses": 5
+    },
+    "ghana_cost_sekondi_takoradi": {
+      "sourceSha256": "978c2de440e60b1aa9c6629f45d89c582f49dd581ac82c117788352d775c0749",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/ghana_cost_sekondi_takoradi/ghana_cost_sekondi_takoradi.json",
+      "publishedDate": "2026-05-18T20:01:33.856Z",
+      "records": 87,
+      "processEntries": 94,
+      "methods": {
+        "open": 89,
+        "selective": 5
+      },
+      "completedProjectsWithActiveProcesses": 45
+    },
+    "indonesia_cost_ntb": {
+      "sourceSha256": "a556637ba4b71b6c37288def59a782022eaf3af0ac179c3ecce1d32c12aa522e",
+      "derivedSha256": null,
+      "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/indonesia_cost_ntb/indonesia_cost_ntb.json",
+      "publishedDate": "2025-12-30T01:48:40+08:00",
+      "records": 2524,
+      "processEntries": 2139,
+      "methods": {
+        "Unstated": 2,
+        "open": 2137
+      },
+      "completedProjectsWithActiveProcesses": 0
+    }
+  }
+}

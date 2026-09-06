@@ -20,3 +20,16 @@ nav button:disabled{opacity:.4;cursor:default}
 
 .legend .profile-count{font-size:10px;margin-left:6px}.legend .profile-count strong{font:500 16px var(--serif)}
 @media(min-width:721px) and (min-height:651px){#instrument{width:min(60vh,580px);height:min(60vh,580px)}}
+
+/* Independent questions share geography, not a score or measurement scale. */
+.portrait-links{position:absolute;inset:0;pointer-events:none}.portrait-links path{fill:none;stroke:#D60000;stroke-width:.45;stroke-linecap:round;opacity:.55}
+.insight-prong{position:absolute;transform:translate(-50%,-50%);width:174px;padding:7px 6px;pointer-events:auto;text-align:center;background:#fafaf6df;border-radius:12px;line-height:1.2;box-shadow:0 2px 14px #fafaf6aa}
+.insight-prong:hover{background:#fff}.insight-prong strong{display:block;font:500 23px/1.08 var(--serif);margin:5px 0;color:var(--ink);overflow-wrap:anywhere}.insight-prong>span{display:block;font-size:11px}.insight-prong .prong-title{font-size:10px;font-weight:650;color:var(--muted)}.insight-prong small{display:block;font-size:9px;color:var(--muted);margin-top:4px}
+.prong-0{left:50%;top:7%}.prong-1{left:89%;top:34%}.prong-2{left:75%;top:84%}.prong-3{left:25%;top:84%}.prong-4{left:11%;top:34%}.portrait-unavailable{position:absolute;top:70%;left:10%;right:10%;text-align:center;font-size:12px}
+#glyph .portrait-links{width:100%;height:100%}.dock{width:min(520px,90%)}.heading .eyebrow{font-size:9px}
+@media(max-width:720px){.insight-prong{width:112px;padding:6px 3px}.insight-prong strong{font-size:20px}.insight-prong>span{font-size:9px}.insight-prong .prong-title{font-size:9px}.insight-prong small{font-size:8px}.prong-1{left:84%}.prong-4{left:16%}.prong-2{left:74%;top:84%}.prong-3{left:26%;top:84%}.dock{bottom:67px}.legend{bottom:151px}.map-caption{bottom:12px}.leaflet-control-zoom{margin-bottom:200px!important}}
+@media(max-width:360px){.insight-prong{width:98px}.insight-prong strong{font-size:18px}.insight-prong>span{font-size:8px}.heading .eyebrow{font-size:8px}}
+
+.prong-0{top:15%}.prong-2,.prong-3{top:78%}.legend>span:first-child{display:none}.prong-share{display:block;width:54px;height:3px;background:#d8ded9;margin:6px auto 0;border-radius:3px;overflow:hidden}.prong-share>i{display:block;height:100%;background:#D60000}
+@media(max-width:720px){.leaflet-control-zoom{display:flex;margin:0 8px 166px 0!important}.leaflet-control-zoom a{border-bottom:0!important}.leaflet-control-zoom a:first-child{border-right:1px solid var(--line)}}
+@media(max-width:360px){.prong-0{top:20%}}
