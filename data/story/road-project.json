@@ -1,0 +1,213 @@
+{
+  "snapshotId": "atlas-56e8378e871df657e298",
+  "publisherId": "mozambique_ane",
+  "packageSha256": "195b5a34214d8358b2dd44e90bcf611b10b06321c9359b67f2ead790999da194",
+  "checkedAt": "2026-09-05",
+  "project": {
+    "id": "oc4ids-98ri7r-0stEEmL90Work5cWsPyp",
+    "title": "Road R762 Mocímboa da Praia to Palma",
+    "type": "Routine maintenance",
+    "lengthKm": 81,
+    "purpose": "Maintain the road through pothole repairs, drainage work and road signage.",
+    "workItems": [
+      "Pothole repairs",
+      "Drainage work",
+      "Road signage"
+    ],
+    "budget": {
+      "amount": 13399664.88,
+      "currency": "MZN"
+    },
+    "contractValue": {
+      "amount": 13399664.88,
+      "currency": "MZN"
+    },
+    "plannedStart": "2025-01-01",
+    "plannedEnd": "2027-03-04",
+    "projectStatus": "identification",
+    "process": {
+      "id": "WY01H7ZFZ3B3znNqdZHp",
+      "title": "Obras de Manutenção de Rotina de 81 kms da Estrada Revestida R762 Mocímboa da Praia/Palma",
+      "status": "active"
+    },
+    "organizations": {
+      "publicAuthority": "Fundo de Estradas Delegação de Cabo Delgado",
+      "procurer": "Fundo de Estradas Delegação de Cabo Delgado",
+      "funder": "Fundo de Estradas, FP",
+      "supplier": "ATS Construções, Lda"
+    },
+    "reportedPayments": {
+      "count": 4,
+      "total": 1989847.2,
+      "currency": "MZN",
+      "lastDate": "2026-07-07"
+    }
+  },
+  "provenance": {
+    "sourceUrl": "https://live-oc4ids-datastore.fra1.digitaloceanspaces.com/mozambique_ane/mozambique_ane.json",
+    "fieldPaths": {
+      "id": "projects[0].id",
+      "title": "projects[0].title",
+      "description": "projects[0].description",
+      "projectStatus": "projects[0].status",
+      "budget": "projects[0].budget.amount",
+      "plannedStart": "projects[0].period.startDate",
+      "plannedEnd": "projects[0].period.endDate",
+      "publicAuthority": "projects[0].publicAuthority.name",
+      "funder": "projects[0].parties[0].name",
+      "processId": "projects[0].contractingProcesses[0].id",
+      "processTitle": "projects[0].contractingProcesses[0].summary.title",
+      "processStatus": "projects[0].contractingProcesses[0].summary.status",
+      "contractValue": "projects[0].contractingProcesses[0].summary.contractValue",
+      "supplier": "projects[0].contractingProcesses[0].summary.suppliers[0].name",
+      "procurer": "projects[0].contractingProcesses[0].summary.tender.procuringEntity.name",
+      "transactions": "projects[0].contractingProcesses[0].summary.transactions"
+    },
+    "fieldEvidence": {
+      "id": {
+        "path": "projects[0].id",
+        "value": "oc4ids-98ri7r-0stEEmL90Work5cWsPyp"
+      },
+      "title": {
+        "path": "projects[0].title",
+        "value": "Obras de Manutenção de Rotina da Estrada R762 Mocímboa da Praia-Palma"
+      },
+      "description": {
+        "path": "projects[0].description",
+        "value": "O projecto visa manter de forma continuada as operações preventivas e correctivas o combate do desgaste da estrada, incluindo limpeza dos órgãos de drenagem, tapamento de buracos e conservação da sinalização, tendo como resultado a garantia da segurança, redução do desgaste dos veículos, deterioração prematura do pavimento e melhoria das condições de transporte de pessoas e bens."
+      },
+      "projectStatus": {
+        "path": "projects[0].status",
+        "value": "identification"
+      },
+      "budget": {
+        "path": "projects[0].budget.amount",
+        "value": {
+          "amount": 13399664.88,
+          "currency": "MZN"
+        }
+      },
+      "plannedStart": {
+        "path": "projects[0].period.startDate",
+        "value": "2025-01-01T00:00:00.000Z"
+      },
+      "plannedEnd": {
+        "path": "projects[0].period.endDate",
+        "value": "2027-03-04T00:00:00.000Z"
+      },
+      "publicAuthority": {
+        "path": "projects[0].publicAuthority.name",
+        "value": "Fundo de Estradas Delegação de Cabo Delgado"
+      },
+      "funder": {
+        "path": "projects[0].parties[0].name",
+        "value": "Fundo de Estradas, FP"
+      },
+      "processId": {
+        "path": "projects[0].contractingProcesses[0].id",
+        "value": "WY01H7ZFZ3B3znNqdZHp"
+      },
+      "processTitle": {
+        "path": "projects[0].contractingProcesses[0].summary.title",
+        "value": "Obras de Manutenção de Rotina de 81 kms da Estrada Revestida R762 Mocímboa da Praia/Palma"
+      },
+      "processStatus": {
+        "path": "projects[0].contractingProcesses[0].summary.status",
+        "value": "active"
+      },
+      "contractValue": {
+        "path": "projects[0].contractingProcesses[0].summary.contractValue",
+        "value": {
+          "amount": 13399664.88,
+          "currency": "MZN"
+        }
+      },
+      "supplier": {
+        "path": "projects[0].contractingProcesses[0].summary.suppliers[0].name",
+        "value": "ATS Construções, Lda"
+      },
+      "procurer": {
+        "path": "projects[0].contractingProcesses[0].summary.tender.procuringEntity.name",
+        "value": "Fundo de Estradas Delegação de Cabo Delgado"
+      },
+      "transactions": {
+        "path": "projects[0].contractingProcesses[0].summary.transactions",
+        "value": [
+          {
+            "id": "pay-1779872690774",
+            "date": "2025-08-28T00:00:00Z",
+            "value": {
+              "amount": 302708,
+              "currency": "MZN"
+            },
+            "payee": {
+              "id": "contractor-WY01H7ZFZ3B3znNqdZHp",
+              "name": "ATS Construções, Lda"
+            },
+            "relatedImplementationMilestone": {
+              "id": "inv-1779872640406",
+              "title": "Invoice 000042"
+            }
+          },
+          {
+            "id": "pay-1779970299096",
+            "date": "2025-12-25T00:00:00Z",
+            "value": {
+              "amount": 40239.9,
+              "currency": "MZN"
+            },
+            "payee": {
+              "id": "contractor-WY01H7ZFZ3B3znNqdZHp",
+              "name": "ATS Construções, Lda"
+            },
+            "relatedImplementationMilestone": {
+              "id": "inv-1779970103986",
+              "title": "Invoice 000030"
+            }
+          },
+          {
+            "id": "pay-1785841358741",
+            "date": "2026-05-22T00:00:00Z",
+            "value": {
+              "amount": 696899.3,
+              "currency": "MZN"
+            },
+            "payee": {
+              "id": "contractor-WY01H7ZFZ3B3znNqdZHp",
+              "name": "ATS Construções, Lda"
+            },
+            "relatedImplementationMilestone": {
+              "id": "inv-1779970103986",
+              "title": "Invoice 000030"
+            }
+          },
+          {
+            "id": "pay-1788437745881",
+            "date": "2026-07-07T00:00:00Z",
+            "value": {
+              "amount": 950000,
+              "currency": "MZN"
+            },
+            "payee": {
+              "id": "contractor-WY01H7ZFZ3B3znNqdZHp",
+              "name": "ATS Construções, Lda"
+            },
+            "relatedImplementationMilestone": {
+              "id": "inv-1780061405309",
+              "title": "Invoice 000173"
+            }
+          }
+        ]
+      }
+    },
+    "boundaries": [
+      "The road line is a schematic, not mapped geometry.",
+      "The purpose and length describe published work scope, not observed road condition or completion.",
+      "Project budget and contract value are separate fields with the same amount; they are not added or described as spending.",
+      "Project identification and process active are labels at different levels; neither establishes current delivery.",
+      "Four payment transactions are reported by the publisher. Their receipts and corresponding completed work have not been independently verified.",
+      "English scope and work labels are translations of the quoted Portuguese project description and contracting-process title.",
+      "The source extract is tied to the recorded package SHA256 and saved snapshot. The download link may later serve newer data."
+    ]
+  }
+}

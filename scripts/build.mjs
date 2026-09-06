@@ -1,7 +1,7 @@
 import {calculatePublisherInsights} from '../publisher-insights.mjs';
 import fs from 'node:fs';import path from 'node:path';import {writeStoryData} from './story-data.mjs';
 const out='dist';fs.mkdirSync(out,{recursive:true});for(const f of ['index.html','explorer.html','evidence.html','style.css','app.js','map-app.js','map-selection.mjs','glyph.mjs','exhibit.css','story.css','story.mjs','README.md'])fs.copyFileSync(f,path.join(out,f));for(const dir of ['vendor','data/map']){fs.mkdirSync(path.join(out,dir),{recursive:true});for(const f of fs.readdirSync(dir))fs.copyFileSync(path.join(dir,f),path.join(out,dir,f));}fs.writeFileSync(path.join(out,'.nojekyll'),'');
-fs.copyFileSync('data/procurement-evidence.json',path.join(out,'data/procurement-evidence.json'));
+fs.copyFileSync('data/procurement-evidence.json',path.join(out,'data/procurement-evidence.json'));fs.mkdirSync(path.join(out,'data/story'),{recursive:true});fs.copyFileSync('data/story/road-project.json',path.join(out,'data/story/road-project.json'));
 const procurement=JSON.parse(fs.readFileSync('data/procurement-evidence.json'));
 const latest=JSON.parse(fs.readFileSync('data/generated/snapshot.json'));
 writeStoryData('data/generated/snapshots/atlas-56e8378e871df657e298.json',path.join(out,'data/generated/storyboard.json'));
