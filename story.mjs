@@ -1,5 +1,6 @@
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const chapters=[...document.querySelectorAll('.chapter')];
+const hero=document.querySelector('#question');
 const copy={
  overview:['107','saved records','Start with what is published.','Each dot is one saved record. Grouping preserves the same population.'],
  ids:['13 / 107','records with a process ID','A possible route into procurement.','Dark dots contain an ID. The 94 pale dots do not. An ID alone is not a tested link.'],
@@ -37,7 +38,7 @@ try{
   if(history.replaceState)history.replaceState(null,'',location.pathname+location.search+'#'+chapter.id);
  }
  let scheduled=false;
- function readScroll(){scheduled=false;const mobile=innerWidth<=760,target=mobile?Math.min(innerHeight-60,380):innerHeight*.5;const next=chapters.find(c=>c.getBoundingClientRect().bottom>target)||chapters.at(-1);activate(next);}
+ function readScroll(){scheduled=false;if(hero&&hero.getBoundingClientRect().bottom>innerHeight*.45){active=null;if(location.hash!=="#question")history.replaceState(null,"","#question");return;}const mobile=innerWidth<=760,target=mobile?Math.min(innerHeight-60,380):innerHeight*.5;const next=chapters.find(c=>c.getBoundingClientRect().bottom>target)||chapters.at(-1);activate(next);}
  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(readScroll)}}
  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);window.addEventListener('hashchange',schedule);readScroll();
 }catch(error){$('#story-status').textContent=error.message;$('#story-status').hidden=false;}

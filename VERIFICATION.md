@@ -108,3 +108,13 @@ Independent source check: the saved Mozambique Road Fund package SHA-256 `195b5a
 Local Chrome inspection confirms the Mozambique heading, separate currency rows and source links fit the existing sidebar. Ghana renders no budget table and does not turn missing amounts into zero-valued investment. The existing 25 tests and static build passed before review. Two unrelated untracked preview snapshots remain untouched.
 
 After the copy repair, a local legacy `story=freshness` URL opened the investment overview and normalized to `story=investment`. Expanded Source dates showed all three 5 September dates. West Lombok showed the unavailable state without totals. No new mobile-layout claim is made for this text-only section replacement.
+
+## Atlas landing opening, 6 September 2026
+
+The landing opening now introduces the Atlas before the NCC Zambia case study. The headline uses the fixed 5 September 2026 publication saved as `atlas-56e8378e871df657e298`. Independent recalculation over that immutable file confirms 39,443 records with distinct IDs across 10 included publishers. Summing only budgets whose currency is USD with decimal arithmetic gives 25,398,185,374.17 USD across 2,369 records, displayed as US$25.4 billion. Other currencies are excluded from that subtotal. The figure describes reported project budgets, not actual expenditure, total infrastructure investment, or money attributable to transparency. The hero links to the saved calculation inputs and visibly states its partial coverage.
+
+The original Zambia chapter remains a separate case study. Its 107-record population, grouping, source relationships and downstream conclusions are outside this edit. Two unrelated untracked preview snapshots remain untouched.
+
+Verification: all 25 existing tests, static build, script syntax and diff checks passed. Browser checks at 390 × 844 and 320 × 844 showed the Atlas CTA and the USD coverage statement within the opening screen, without visible horizontal overflow. The secondary link entered `#case-study` and retained the original 107-dot visual. Desktop inspection confirmed the main CTA, source note and budget scope; a sticky-header offset was added so `#question` does not conceal the introductory line. The case-study date lesson was removed from its opening; source dates remain in its evidence drawer. Independent review passed before the final copy and anchor-offset repair.
+
+The final case-study copy and header-offset repair also passed independent review. The prose scanner reported no violations; generic action/mechanism warnings were reviewed against the explicit Explore CTA and calculation explanation. A source-caption separator is retained as a compact date label.
