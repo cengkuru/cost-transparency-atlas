@@ -3,7 +3,7 @@ const chapters=[...document.querySelectorAll('.chapter')];
 const hero=document.querySelector('#question');
 const copy={
  overview:['107','saved records','Start with what is published.','Each dot is one saved record. Grouping preserves the same population.'],
- ids:['13 / 107','records with a process ID','A possible route into procurement.','Dark dots contain an ID. The 94 pale dots do not. An ID alone is not a tested link.'],
+ ids:['13 / 107','project listings with a reference','A reference can help start the search.','Each dot is a project listing. The 13 dark dots include a reference number; the 94 pale dots do not. Finding and checking the documents is the next step.'],
  both:['11 / 107','records with both fields','Two fields meet in the same record.','The 11 dark dots contain both a budget with currency and a procurement identifier.'],
  split:['70 / 107','budget present, ID absent','Different gaps need different checks.','The four groups contain all 107 records. Outlined dots lack a procurement ID.'],
  featured:['1','deliberate example','An award is visible. Delivery is not established.','Bulemu is one of the two ID-only records. Its award source can be read; financial and delivery questions remain.'],
