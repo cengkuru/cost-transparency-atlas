@@ -98,3 +98,13 @@ New pure-module tests were observed red before implementation and repair, then g
 Browser inspection: Ghana's five values and project-stage/budget inspectors agree with the saved calculations. The stage detail links its exact counting rule. Zambia's budget inspector separates all four currencies and states 81 of 107 contributing records. Phone viewports at 390 and 320 pixels were inspected; the prongs stay within the initial view, with map zoom controls moved below them. Publisher selection remains linked to the lens. No physical touchscreen or prospective-reader comprehension test is claimed. Independent review and the public release are verified separately after final changes.
 
 Final local gesture checks changed all five Costa Rica units to Ghana through lens dragging, returned to Costa Rica through background dragging, then cleared every unit over an empty area. A legacy comparison query restored the primary publisher and was removed from the URL. Independent Sol review passed after the source-rule reproducibility repair.
+
+## Investment overview, 6 September 2026
+
+Replaces the explorer's Dates navigation and date-led dialog with an Investment overview. Source dates remain collapsed. The change uses existing publisher insights and preserves currencies separately; it does not change the snapshot or valuation method.
+
+Independent source check: the saved Mozambique Road Fund package SHA-256 `195b5a34214d8358b2dd44e90bcf611b10b06321c9359b67f2ead790999da194` matches the snapshot. Decimal arithmetic over its 100 distinct project IDs reproduces MZN 4,199,702,465.81 from 95 records, USD 933,300,000 from four, and EUR 124,000,000 from one. These are reported project budgets, not expenditure or verified investment. Source: the publisher JSON linked in the overview; package published and retrieved 5 September 2026, checked 6 September 2026.
+
+Local Chrome inspection confirms the Mozambique heading, separate currency rows and source links fit the existing sidebar. Ghana renders no budget table and does not turn missing amounts into zero-valued investment. The existing 25 tests and static build passed before review. Two unrelated untracked preview snapshots remain untouched.
+
+After the copy repair, a local legacy `story=freshness` URL opened the investment overview and normalized to `story=investment`. Expanded Source dates showed all three 5 September dates. West Lombok showed the unavailable state without totals. No new mobile-layout claim is made for this text-only section replacement.
