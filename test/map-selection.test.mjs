@@ -1,38 +1,26 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {nearestPublisherId,wireMapDragSelection} from '../map-selection.mjs';
+import {resolveLens} from '../map-selection.mjs';
 
-function adapter(){
-  const handlers=new Map();
-  let center={lat:0,lng:0};
-  return {map:{on(type,fn){handlers.set(type,fn);},getCenter(){return center;}},setCenter(next){center=next;},emit(type){handlers.get(type)?.();},handlers};
-}
-
-test('drag selection follows drag lifecycle and settles after inertia',()=>{
-  const {map,emit,setCenter}=adapter(), selected=[], settled=[];
-  wireMapDragSelection({map,candidates:[{id:'a',lat:0,lng:0},{id:'b',lat:0,lng:20}],onSelection:id=>selected.push(id),onSettled:id=>settled.push(id)});
-  emit('move');
-  assert.deepEqual(selected,[]);
-  emit('dragstart'); emit('move'); setCenter({lat:0,lng:20}); emit('move'); emit('dragend');
-  assert.deepEqual(selected,['a','b']);
-  assert.deepEqual(settled,[]);
-  emit('moveend');
-  assert.deepEqual(selected,['a','b','b']);
-  assert.deepEqual(settled,['b']);
+const candidates=[{id:'a',point:{x:0,y:0}},{id:'b',point:{x:3,y:4}},{id:'c',point:{x:10,y:0}}];
+test('resolves nearest candidate inside and on positive radius boundary',()=>{
+  assert.deepEqual(resolveLens({x:0,y:1},candidates,5),{id:'a',distance:1});
+  assert.deepEqual(resolveLens({x:0,y:0},[{id:'b',point:{x:3,y:4}}],5),{id:'b',distance:5});
 });
-
-test('nearest selection wraps longitude, ignores invalid candidates and keeps first duplicate',()=>{
-  assert.equal(nearestPublisherId({lat:0,lng:179.8},[
-    {id:'bad',lat:NaN,lng:0},{id:'west',lat:0,lng:-179.9},{id:'east',lat:0,lng:179.9},
-    {id:'east',lat:0,lng:0}
-  ]),'east');
-  assert.equal(nearestPublisherId({lat:0,lng:0},[{id:'a',lat:0,lng:1},{id:'a',lat:0,lng:0}]),'a');
-  assert.equal(nearestPublisherId({lat:0,lng:0},[{id:'bad',lat:null,lng:0},{id:'bad2',lat:91,lng:0}]),null);
+test('rejects outside, empty, invalid and nonpositive radius inputs',()=>{
+  assert.equal(resolveLens({x:100,y:0},candidates,4.9),null);
+  assert.equal(resolveLens({x:0,y:0},[],5),null);
+  assert.equal(resolveLens({x:NaN,y:0},candidates,5),null);
+  assert.equal(resolveLens({x:0,y:0},[{id:'bad',point:{x:Infinity,y:0}}],5),null);
+  assert.equal(resolveLens({x:0,y:0},candidates,0),null);
 });
-
-test('cancel prevents late inertia selection',()=>{
-  const {map,emit}=adapter(), selected=[], settled=[];
-  const cancel=wireMapDragSelection({map,candidates:[{id:'a',lat:0,lng:0}],onSelection:id=>selected.push(id),onSettled:id=>settled.push(id)});
-  emit('dragstart'); cancel(); emit('move'); emit('moveend');
-  assert.deepEqual(selected,[]); assert.deepEqual(settled,[]);
+test('stable order wins ties and moving lens or anchor resolves the new nearest',()=>{
+  assert.deepEqual(resolveLens({x:1,y:0},[{id:'first',point:{x:0,y:0}},{id:'second',point:{x:2,y:0}}],2),{id:'first',distance:1});
+  assert.equal(resolveLens({x:9,y:0},candidates,2)?.id,'c');
+  assert.equal(resolveLens({x:0,y:0},[{id:'a',point:{x:8,y:0}},{id:'b',point:{x:1,y:0}}],2)?.id,'b');
+});
+test('empty or invalid inputs return null and clear stale selection',()=>{
+  let selection=resolveLens({x:0,y:0},candidates,2);
+  selection=resolveLens({x:0,y:0},[],2);
+  assert.equal(selection,null);
 });
